@@ -1,0 +1,31 @@
+.button {
+	box-sizing: border-box;
+}
+
+.primary {
+	display: flex;
+
+	align-items: center;
+	justify-content: flex-end;
+
+	width: 76px;
+
+	color: var(--primary);
+
+	border: none;
+	border-radius: 0;
+	background: none;
+
+	font-size: 12px;
+}
+
+.secondary {
+	flex-shrink: 0;
+
+	width: 229px;
+	height: 48px;
+
+	color: var(--white);
+	border-radius: 8px;
+	background: #303030;
+}

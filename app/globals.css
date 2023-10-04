@@ -4,7 +4,7 @@ body {
 	padding: 0;
 
 	color: var(--black);
-	background: #F5F6F8;
+	background: var(--white);
 }
 
 a {
@@ -21,7 +21,7 @@ a {
 	--black: #2C2C2C;
 	--black-pale: #4B4B4B;
 	--black-pale-pale: #6E6E6E;
-	--white: white;
+	--white: #F5F6F8;
 	--primary: #1473E6;
 	--primary-pale: #E5F4FF;
 }
