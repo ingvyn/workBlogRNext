@@ -1,0 +1,18 @@
+.likes {
+	display: inline-block;
+
+	margin: 0;
+
+	color: var(--black-pale-pale);
+
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: normal;
+}
+
+.img {
+	display: inline-block;
+	
+	margin: 0;
+}

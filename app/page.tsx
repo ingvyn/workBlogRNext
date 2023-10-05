@@ -1,13 +1,15 @@
-import { Htag, Button, P } from "./components";
+import { Card, Htag, Button, P, Likes, CardMedia } from "./components";
 
 export default function Home() {
 	return (
 		<div>
-			<Htag tag='h3'>Текст</Htag>
-			<P>Маленький текст</P>
-			<P size='m'>Средний текст</P>
-			<P size='l'>Большой текст</P>
-			<Button appearance='primary'>Читать</Button>
+			<Htag tag='h1'>.my_blog</Htag>
+			<Card>
+				<CardMedia src="cardMedia-Safari (Catalina) - Dark 1.png" />
+				<div className="flex-row">
+					<Likes quantity={4} />
+				</div>
+			</Card>
 		</div>
 	);
 }
