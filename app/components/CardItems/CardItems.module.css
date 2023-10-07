@@ -1,0 +1,32 @@
+.inline {
+	display: flex;
+	
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 6px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-between;
+	gap: 6px;
+
+	width: 100%;
+}
+
+.col8gap {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+
+	flex-direction: column;
+}
+
+.col0gap {
+	display: flex;
+	align-items: flex-start;
+
+	flex-direction: column;
+}
