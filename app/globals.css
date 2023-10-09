@@ -17,11 +17,16 @@ a {
 	box-sizing: border-box;
 }
 
+.underline {
+	text-decoration: underline;
+}
+
 :root {
 	--black: #2C2C2C;
 	--black-pale: #4B4B4B;
 	--black-pale-pale: #6E6E6E;
-	--white: #F5F6F8;
+	--grey-pale: #F5F5F5;
+	--white: #FFF;
 	--primary: #1473E6;
 	--primary-pale: #E5F4FF;
 }

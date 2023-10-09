@@ -6,7 +6,7 @@ export const P = ({ size = 's', children, className, ...rest }: ParagraphProps):
 	return <p
 		className={
 			cn(className, styles.p, {
-				[styles.d]: size == 's',
+				[styles.s]: size == 's',
 				[styles.m]: size == 'm',
 				[styles.l]: size == 'l',
 			}
