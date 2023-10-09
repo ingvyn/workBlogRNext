@@ -1,4 +1,4 @@
-import { ParagraphProps } from "./P.props";
+import { ParagraphProps } from './P.props';
 import styles from './P.module.css';
 import cn from 'classnames';
 
