@@ -20,7 +20,7 @@ export default function Home() {
 							Как работать с CSS Grid
 						</Htag>
 						<P>
-							Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы.
+							<span className="underline">Грид-раскладка (CSS Grid Layout)</span> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы.
 						</P>
 					</CardItems>
 				</CardItems>
@@ -28,6 +28,7 @@ export default function Home() {
 					<Tag>3 минуты</Tag>
 					<Button appearance='primary'>
 						Читать
+						<img src="Button-icon-arrow.png" />
 					</Button>
 				</CardItems>
 			</Card>
