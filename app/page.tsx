@@ -1,4 +1,5 @@
 import { Card, Htag, Button, P, Likes, Tag, CardMedia, CardItems } from "./components";
+import { pluralize } from './utils/pluralize';
 
 export default function Home() {
 	return (
@@ -25,7 +26,7 @@ export default function Home() {
 					</CardItems>
 				</CardItems>
 				<CardItems lay='row'>
-					<Tag>3 минуты</Tag>
+					<Tag>{`3 ${pluralize(3, ['минута', 'минуты', 'минут'])}`}</Tag>
 					<Button appearance='primary'>
 						Читать
 						<img src="Button-icon-arrow.png" />
