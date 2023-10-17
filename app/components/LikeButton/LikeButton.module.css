@@ -1,0 +1,23 @@
+.common {
+	box-sizing: border-box;
+	width: 48px;
+	height: 48px;
+
+	border-radius: 40px;
+}
+
+.nonLiked {
+	border: 1px solid var(--black-stroke);
+}
+
+.nonLiked svg {
+	stroke: var(--black-stroke);
+}
+
+.liked svg {
+	stroke: var(--white);
+}
+
+.liked {
+	background: var(--black-stroke);
+}
