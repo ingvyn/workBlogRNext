@@ -1,4 +1,4 @@
-import { Card, Htag, Button, P, Likes, Tag, CardMedia, CardItems } from "./components";
+import { Card, Htag, Button, P, Likes, Tag, CardMedia, CardItems, LikeButton } from "./components";
 import { pluralize } from './utils/pluralize';
 
 export default function Home() {
@@ -33,6 +33,7 @@ export default function Home() {
 					</Button>
 				</CardItems>
 			</Card>
+			<LikeButton appearance='nonLiked' />
 		</div>
 	);
 }
