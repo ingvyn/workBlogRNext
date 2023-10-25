@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
+import { Header, Htag } from './components';
 
 const open_sans = Open_Sans({ subsets: ['cyrillic'] });
 
@@ -16,7 +17,15 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="ru">
-			<body className={open_sans.className}>{children}</body>
+			<body className={open_sans.className}>
+				<Header>
+					<Htag tag='h1'>Блог на гридах</Htag>
+					<a href='https://github.com/ingvyn'>
+						<img src='icon-github.svg' />
+					</a>
+				</Header>
+				{children}
+			</body>
 		</html>
 	);
 }

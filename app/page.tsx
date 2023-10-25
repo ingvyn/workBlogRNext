@@ -4,7 +4,6 @@ import { pluralize } from './utils/pluralize';
 export default function Home() {
 	return (
 		<div>
-			<Htag tag='h1'>.my_blog</Htag>
 			<Card>
 				<CardMedia src="cardMedia-Safari (Catalina) - Dark 1.png" />
 				<CardItems lay='col8gap'>
@@ -33,7 +32,7 @@ export default function Home() {
 					</Button>
 				</CardItems>
 			</Card>
-			<LikeButton appearance='nonLiked' />
+			<LikeButton />
 		</div>
 	);
 }
