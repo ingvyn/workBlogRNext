@@ -31,3 +31,22 @@ a {
 	--primary: #1473E6;
 	--primary-pale: #E5F4FF;
 }
+
+.wrapper {
+	display: grid;
+	grid-template-columns: auto [startline] minmax(1520px,1600px) [endline] auto;
+	grid-template-rows: auto 1fr;
+	gap: 40px;
+}
+
+.header, .blog {
+	grid-column: startline / endline;
+}
+
+.blogGrid {
+	display: grid;
+	grid-template-columns: repeat(4, 350px);
+	gap: 40px;
+	justify-content: space-between;	
+
+}
