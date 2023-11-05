@@ -1,9 +1,10 @@
 import { Card, Htag, Button, P, Likes, Tag, CardMedia, CardItems, LikeButton } from "./components";
 import { pluralize } from './utils/pluralize';
+import styles from './page.module.css';
 
 export default function Home() {
 	return (
-		<div className='blogGrid'>
+		<div className={styles.blogGrid}>
 			<Card>
 				<CardMedia src="cardMedia-Safari (Catalina) - Dark 1.png" />
 				<CardItems lay='col8gap'>

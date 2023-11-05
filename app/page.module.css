@@ -1,0 +1,29 @@
+.blogGrid {
+	display: grid;
+	grid-template-columns: repeat(4, 350px);
+	gap: 40px;
+}
+
+@media (max-width: 1600px) {
+	.blogGrid {
+		display: grid;
+		grid-template-columns: repeat(3, 350px);
+		gap: 40px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.blogGrid {
+		display: grid;
+		grid-template-columns: repeat(2, 350px);
+		gap: 40px;
+	}
+}
+
+@media (max-width: 800px) {
+	.blogGrid {
+		display: grid;
+		grid-template-columns: 350px;
+		gap: 40px;
+	}
+}
