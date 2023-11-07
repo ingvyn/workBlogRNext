@@ -5,6 +5,8 @@ body {
 
 	color: var(--black);
 	background: var(--white);
+
+
 }
 
 a {
@@ -33,12 +35,35 @@ a {
 }
 
 .wrapper {
-	display: grid;
-	grid-template-columns: auto [startline] 1fr [endline] auto;
-	grid-template-rows: auto 1fr;
-	gap: 40px;
+	display: flex;
+
+	align-content: center;
+	flex-direction: column;
+
+	margin: auto;
 }
 
-.header, .blog {
-	grid-column: startline / endline;
+
+@media (width > 1550px) {
+	.wrapper {
+		width: 1550px;
+	}
+}
+
+@media (width <= 1550px) {
+	.wrapper {
+		width: 1150px;
+	}
+}
+
+@media (width <= 1150px) {
+	.wrapper {
+		width: 750px;
+	}
+}
+
+@media (width <= 800px) {
+	.wrapper {
+		width: 350px;
+	}
 }

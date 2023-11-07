@@ -19,15 +19,13 @@ export default function RootLayout({
 		<html lang="ru">
 			<body className={open_sans.className}>
 				<div className="wrapper">
-					<Header className='header'>
+					<Header>
 						<Htag tag='h1'>Блог на гридах</Htag>
 						<a href='https://github.com/ingvyn'>
 							<img src='icon-github.svg' />
 						</a>
 					</Header>
-					<div className="blog">
-						{children}
-					</div>
+					{children}
 				</div>
 			</body>
 		</html>
