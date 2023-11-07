@@ -5,7 +5,7 @@ import cn from 'classnames';
 export const Header = ({ className, children, ...props }: HeaderProps): JSX.Element => {
 	return (
 		<div
-			className={cn(styles.blog, className, {
+			className={cn(styles.blogHeader, className, {
 			})}
 			{...props}
 		>
