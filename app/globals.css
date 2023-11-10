@@ -1,3 +1,4 @@
+/* stylelint-disable media-feature-range-notation */
 html,
 body {
 	margin: 0;
@@ -36,34 +37,11 @@ a {
 
 .wrapper {
 	display: flex;
-
-	align-content: center;
 	flex-direction: column;
 
-	margin: auto;
+	min-width: 350px;
+	max-width: min(calc(100vw - 200px), 1800px);
+	margin: 0 auto;
 }
 
 
-@media (width > 1600px) {
-	.wrapper {
-		width: 1550px;
-	}
-}
-
-@media (width <= 1600px) {
-	.wrapper {
-		width: 1150px;
-	}
-}
-
-@media (width <= 1200px) {
-	.wrapper {
-		width: 750px;
-	}
-}
-
-@media (width <= 800px) {
-	.wrapper {
-		width: 350px;
-	}
-}
