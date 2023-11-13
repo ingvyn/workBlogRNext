@@ -1,9 +1,8 @@
 'use client';
 
-import { Card, Htag, Button, P, Likes, Tag, CardMedia, CardItems, LikeButton } from "./components";
+import { Card, Htag, Button, P, Likes, Tag, CardMedia, CardItems, LikeButton, onLike } from "./components";
 import { pluralize } from './utils/pluralize';
 import styles from './page.module.css';
-import { setLikes } from './utils/setLikes';
 
 export default function Home() {
 	return (
@@ -120,7 +119,7 @@ export default function Home() {
 					</Button>
 				</CardItems>
 			</Card>
-			<LikeButton post={1} onLike={setLikes} />
+			<LikeButton post={1} onLike={onLike} />
 		</div>
 	);
 }
