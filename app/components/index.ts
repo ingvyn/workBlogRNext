@@ -10,3 +10,4 @@ export * from './Likes/Likes';
 export * from './CardMedia/CardMedia';
 export * from './CardItems/CardItems';
 export * from './LikeButton/LikeButton';
+export * from './LikeButton/onLike';
