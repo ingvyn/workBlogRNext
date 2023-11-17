@@ -1,9 +1,14 @@
-'use client';
-
+import { PostItem } from '@/interfaces/post.interface';
 import { LikeButton, onLike, SampleCard } from "./components";
 import styles from './page.module.css';
 
-export default function Home() {
+const getPosts = async (): Promise<PostItem[]> => {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/posts`);
+	return res.json();
+};
+export default async function Home() {
+	const posts = await getPosts();
+	const selectedPosts = posts.filter(({ id }) => id < 10);
 	return (
 		<div className={styles.blogGrid}>
 			<SampleCard />
@@ -11,6 +16,7 @@ export default function Home() {
 			<SampleCard />
 			<SampleCard />
 			<LikeButton post={1} onLike={onLike} />
+			{selectedPosts.map(({ id, title }) => (<div key={id}>{`${id}. ${title}`}</div>))}
 		</div>
 	);
 }
