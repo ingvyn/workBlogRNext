@@ -8,7 +8,7 @@ const getPosts = async (): Promise<PostItem[]> => {
 };
 export default async function Home() {
 	const posts = await getPosts();
-	const selectedPosts = posts.filter(({ id }) => id < 10);
+	const selectedPosts = posts && posts.filter(({ id }) => id < 10);
 	return (
 		<div className={styles.blogGrid}>
 			<SampleCard />
@@ -16,7 +16,7 @@ export default async function Home() {
 			<SampleCard />
 			<SampleCard />
 			<LikeButton post={1} onLike={onLike} />
-			{selectedPosts.map(({ id, title }) => (<div key={id}>{`${id}. ${title}`}</div>))}
+			{selectedPosts && selectedPosts.map(({ id, title }) => (<div key={id}>{`${id}. ${title}`}</div>))}
 		</div>
 	);
 }
