@@ -2,7 +2,15 @@ import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
 import cn from 'classnames';
 
-export const Header = ({ className, children, ...props }: HeaderProps): JSX.Element => {
+const getDevAccount = async () => {
+	return {
+		href: 'https://github.com/ingvyn',
+		image: 'icon-github.svg'
+	};
+};
+
+export const Header = async ({ className, children, ...props }: HeaderProps): Promise<JSX.Element> => {
+	const devAccount = await getDevAccount();
 	return (
 		<div
 			className={cn(styles.blogHeader, className, {
@@ -10,6 +18,13 @@ export const Header = ({ className, children, ...props }: HeaderProps): JSX.Elem
 			{...props}
 		>
 			{children}
+			{
+				devAccount && (
+					<a href={devAccount.href}>
+						<img src={devAccount.image} />
+					</a>
+				)
+			}
 		</div>
 	);
 };
