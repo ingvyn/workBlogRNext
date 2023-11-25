@@ -1,19 +1,14 @@
-import { PostItem } from '@/interfaces/post.interface';
 import { Htag, LikeButton, onLike, P, SampleCard } from "./components";
+import { getSelectedPosts } from '@/api/posts';
 import styles from './page.module.css';
 
-const getPosts = async (): Promise<PostItem[]> => {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/posts`);
-	return res.json();
-};
 export default async function Home() {
-	const posts = await getPosts();
-	const selectedPosts = posts && posts.filter(({ id }) => id < 10);
+	const selectedPosts = await getSelectedPosts();
 	return (
 		<div className={styles.blogGrid}>
 			{selectedPosts && selectedPosts.map(({ id, title, body }) => {
 				return (
-					<SampleCard key={id}>
+					<SampleCard postId={id} key={id}>
 						<Htag tag='h4'>
 							{title}
 						</Htag>
