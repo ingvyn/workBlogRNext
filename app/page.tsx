@@ -6,7 +6,7 @@ export default async function Home() {
 	const selectedPosts = await getSelectedPosts();
 	return (
 		<div className={styles.blogGrid}>
-			{selectedPosts && selectedPosts.map(({ id, title, body }) => {
+			{selectedPosts.map(({ id, title, body }) => {
 				return (
 					<SampleCard postId={id} key={id}>
 						<Htag tag='h4'>
