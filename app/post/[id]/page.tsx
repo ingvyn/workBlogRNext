@@ -4,7 +4,7 @@ import { PostItem } from '@/interfaces/post.interface';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { CardMedia, CardItems, Tag, Likes } from '@/app/components/';
-import style from './page.module.css';
+import styles from './page.module.css';
 
 export async function generateStaticParams() {
 	const posts: PostItem[] = await getSelectedPosts();
@@ -22,7 +22,7 @@ export default async function Post({ params }: { params: { id: string } }) {
 	}
 	const { title, body } = post;
 	return (
-		<div className={style.wrapper}>
+		<div className={styles.wrapper}>
 			<Htag tag='h2'>
 				{title}
 			</Htag>
