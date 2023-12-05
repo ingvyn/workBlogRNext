@@ -13,10 +13,10 @@ export const SampleCard = ({ children, postId, ...props }: SampleCardProps): JSX
 	return (
 		<div {...props}>
 			<Card>
-				<CardMedia src="cardMedia-Safari (Catalina) - Dark 1.png" />
+				<CardMedia src="cardMedia-Safari (Catalina) - Dark 1.png" context='list' />
 				<CardItems lay='col8gap'>
 					<CardItems lay='row'>
-						<CardItems lay='inline'>
+						<CardItems lay='inline' className='gap-6'>
 							<Tag>Frontend</Tag>
 							<span>·</span>
 							<Tag>1 месяц назад</Tag>
