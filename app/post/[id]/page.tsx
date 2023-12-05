@@ -1,9 +1,8 @@
 import { getSelectedPosts, getPost } from '@/api/posts';
-import { Htag } from '@/app/components';
 import { PostItem } from '@/interfaces/post.interface';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { CardMedia, CardItems, Tag, Likes } from '@/app/components/';
+import { CardMedia, CardItems, Tag, Likes, Htag, LikeButton, onLike } from '@/app/components/';
 import styles from './page.module.css';
 
 export async function generateStaticParams() {
@@ -21,6 +20,7 @@ export default async function Post({ params }: { params: { id: string } }) {
 		notFound();
 	}
 	const { title, body } = post;
+	const id = Number(params.id);
 	return (
 		<div className={styles.wrapper}>
 			<Htag tag='h2'>
@@ -36,7 +36,11 @@ export default async function Post({ params }: { params: { id: string } }) {
 				<Likes quantity={4} />
 			</CardItems>
 			<CardMedia src="Safari (Catalina) - Dark 1.png" context='post' />
-			{body}
+			{body && <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: body }}></div>}
+			<div className={styles.likesPress}>
+				<span>Понравилось? Жми</span>
+				<LikeButton post={id} onLike={onLike} />
+			</div>
 		</div>
 	);
 }
