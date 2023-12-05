@@ -10,22 +10,15 @@
 	flex-direction: row;
 
 	justify-content: space-between;
-	gap: 6px;
 
 	width: 100%;
 }
 
-.col8gap {
+.col {
 	display: flex;
 	align-items: flex-start;
-	gap: 8px;
+	gap: 0;
 
 	flex-direction: column;
 }
 
-.col0gap {
-	display: flex;
-	align-items: flex-start;
-
-	flex-direction: column;
-}
