@@ -14,8 +14,8 @@ export const SampleCard = ({ children, postId, ...props }: SampleCardProps): JSX
 		<div {...props}>
 			<Card>
 				<CardMedia src="cardMedia-Safari (Catalina) - Dark 1.png" context='list' />
-				<CardItems lay='col8gap'>
-					<CardItems lay='row'>
+				<CardItems lay='col' className='gap-8'>
+					<CardItems lay='row' className='gap-6'>
 						<CardItems lay='inline' className='gap-6'>
 							<Tag>Frontend</Tag>
 							<span>·</span>
@@ -23,11 +23,11 @@ export const SampleCard = ({ children, postId, ...props }: SampleCardProps): JSX
 						</CardItems>
 						<Likes quantity={4} />
 					</CardItems>
-					<CardItems lay='col0gap'>
+					<CardItems lay='col'>
 						{children}
 					</CardItems>
 				</CardItems>
-				<CardItems lay='row'>
+				<CardItems lay='row' className='gap-6'>
 					<Tag>{`3 ${pluralize(3, ['минута', 'минуты', 'минут'])}`}</Tag>
 					<Link href={`/post/${postId}`}>
 						<Button appearance='primary'>
