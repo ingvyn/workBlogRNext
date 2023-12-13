@@ -2,7 +2,7 @@ import { getSelectedPosts, getPost } from '@/api/posts';
 import { PostItem } from '@/interfaces/post.interface';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { Tag, Likes, Htag, LikeButton, onLike } from '@/app/components/';
+import { Tag, Likes, Htag, LikeButton, onLike, PostComments } from '@/app/components/';
 import styles from './page.module.css';
 import { formatDistance, subDays } from 'date-fns';
 import { ru } from 'date-fns/locale';
@@ -51,6 +51,7 @@ export default async function Post({ params }: { params: { id: string } }) {
 				<span>Понравилось? Жми</span>
 				<LikeButton post={id} onLike={onLike} />
 			</div>
+			<PostComments post={id} />
 		</div>
 	);
 }
