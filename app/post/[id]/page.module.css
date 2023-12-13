@@ -4,8 +4,9 @@
 }
 
 .postContent {
-	width: auto;
 	margin: 0 0 20px;
+
+	color: var(--black-pale-pale);
 
 	font-size: 18px;
 	
