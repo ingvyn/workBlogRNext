@@ -11,4 +11,3 @@ export * from './CardItems/CardItems';
 export * from './SampleCard/SampleCard';
 export * from './LikeButton/LikeButton';
 export * from './LikeButton/onLike';
-export * from './PostComments/PostComments';
