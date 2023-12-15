@@ -18,8 +18,8 @@ export const PostComments = async ({ post, className, ...props }: PostCommentsPr
 			<Htag tag='h2'>
 				Комментарии
 			</Htag>
-			{comments && comments.map(({ name, email, body }) => {
-				return <div>
+			{comments && comments.map(({ id, name, email, body }) => {
+				return <div key={id}>
 					<div className={styles.inline}>
 						<span className={styles.name}>{name}</span>
 						<span>·</span>
