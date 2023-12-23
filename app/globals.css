@@ -33,6 +33,7 @@ a {
 	--white: #FFF;
 	--primary: #1473E6;
 	--primary-pale: #E5F4FF;
+	--grey-outline: rgba (40, 40, 40, 0.16);
 }
 
 .wrapper {

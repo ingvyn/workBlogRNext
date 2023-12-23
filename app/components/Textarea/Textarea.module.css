@@ -9,6 +9,8 @@
 	border-radius: 8px;
 	background: var(--white);
 
+	box-shadow: none;
+
 	font-size: 15px;
 
 	font-weight: 400;
@@ -18,4 +20,20 @@
 
 .input::placeholder {
 	color: rgba (78, 93, 124, 0.50);
+}
+
+.error {
+	border: 1px solid #E75703;
+}
+
+.inputWrapper {
+	position: relative;
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+
+	color: #E73103;
 }
