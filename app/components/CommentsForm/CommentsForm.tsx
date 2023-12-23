@@ -6,12 +6,14 @@ import { Textarea } from '../Textarea/Textarea';
 import { Button } from '../Button/Button';
 import { useForm } from 'react-hook-form';
 import { CommentForm } from '@/interfaces/commentForm.interface';
+import { patchPost } from '@/api/posts';
 
 export const CommentsForm = ({ post, className, ...props }: CommentsFormProps): JSX.Element => {
-	const { register, handleSubmit, formState: { errors } } = useForm<CommentForm>();
+	const { register, handleSubmit, reset, formState: { errors } } = useForm<CommentForm>();
 
-	const onSubmit = (data: CommentForm) => {
-		console.log(data);
+	const onSubmit = async (formData: CommentForm) => {
+		const data = await patchPost({ ...formData, id: post.toString() });
+		if (data) reset();
 	};
 
 	return (
