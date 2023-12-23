@@ -34,6 +34,8 @@ a {
 	--primary: #1473E6;
 	--primary-pale: #E5F4FF;
 	--grey-outline: rgba (40, 40, 40, 0.16);
+	--red-outline: #E75703;
+	--red-text: #E73103;
 }
 
 .wrapper {
