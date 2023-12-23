@@ -9,6 +9,8 @@
 	border-radius: 8px;
 	background: var(--white);
 
+	box-shadow:none;
+
 	font-size: 15px;
 
 	font-weight: 400;
