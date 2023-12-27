@@ -8,8 +8,7 @@ export const CardItems = ({ lay, children, className, ...props }: CardItemsProps
 			className={cn(className, {
 				[styles.inline]: lay == 'inline',
 				[styles.row]: lay == 'row',
-				[styles.col8gap]: lay == 'col8gap',
-				[styles.col0gap]: lay == 'col0gap'
+				[styles.col]: lay == 'col',
 			})}
 			{...props}
 		>

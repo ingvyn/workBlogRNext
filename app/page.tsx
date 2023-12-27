@@ -1,4 +1,4 @@
-import { Htag, LikeButton, onLike, P, SampleCard } from "./components";
+import { Htag, P, SampleCard } from "./components";
 import { getSelectedPosts } from '@/api/posts';
 import styles from './page.module.css';
 
@@ -18,7 +18,7 @@ export default async function Home() {
 					</SampleCard>
 				);
 			})}
-			<LikeButton post={1} onLike={onLike} />
+
 		</div>
 	);
 }

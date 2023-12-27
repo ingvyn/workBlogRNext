@@ -1,0 +1,42 @@
+.comments {
+	margin-top: 50px;
+}
+
+.inline {
+	display: flex;
+
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 7px;
+
+	margin-top: 20px;
+}
+
+.name {
+	color: var(--black-pale);
+
+	font-size: 12px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: normal;
+}
+
+.email {
+	color: var(--black-pale-pale);
+	
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: normal;
+}
+
+.comment {
+	margin-top: 7px;
+
+	color: var(--black-pale);
+
+	font-size: 16px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 28px;
+}

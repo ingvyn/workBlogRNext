@@ -1,4 +1,4 @@
-.mini {
+.list {
 	justify-content: center;
 
 	height: 200px;
@@ -7,4 +7,8 @@
 
 	border-radius: 5px;
 	background: var(--primary-pale);
+}
+
+.post {
+	margin-left: -24px;
 }

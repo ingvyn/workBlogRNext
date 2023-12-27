@@ -1,0 +1,15 @@
+.commentsForm {
+	display: flex;
+	flex-direction: column;
+
+	margin-top: 23px;
+	padding-bottom: 60px;
+	gap: 15px;
+}
+
+.submit {
+	margin: 9px 5px;
+
+	font-size: 15px;
+	font-weight: 700;
+}

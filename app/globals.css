@@ -33,6 +33,9 @@ a {
 	--white: #FFF;
 	--primary: #1473E6;
 	--primary-pale: #E5F4FF;
+	--grey-outline: rgba (40, 40, 40, 0.16);
+	--red-outline: #E75703;
+	--red-text: #E73103;
 }
 
 .wrapper {
@@ -45,3 +48,14 @@ a {
 }
 
 
+.gap-6 {
+	gap: 6px;
+}
+
+.gap-8 {
+	gap: 8px;
+}
+
+.gap-12 {
+	gap: 12px;
+}
