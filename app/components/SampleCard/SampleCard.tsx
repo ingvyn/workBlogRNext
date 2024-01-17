@@ -8,10 +8,12 @@ import { CardItems } from '../CardItems/CardItems';
 import { pluralize } from '../../utils/pluralize';
 import { SampleCardProps } from './SampleCard.props';
 import Link from 'next/dist/client/link';
+import { ForwardedRef, forwardRef } from 'react';
+import { motion } from 'framer-motion';
 
-export const SampleCard = ({ children, postId, ...props }: SampleCardProps): JSX.Element => {
+export const SampleCard = motion(forwardRef<HTMLDivElement, SampleCardProps>(({ children, postId, ...props }: SampleCardProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
 	return (
-		<div {...props}>
+		<div {...props} ref={ref}>
 			<Card>
 				<CardMedia src="cardMedia-Safari (Catalina) - Dark 1.png" context='list' />
 				<CardItems lay='col' className='gap-8'>
@@ -39,4 +41,4 @@ export const SampleCard = ({ children, postId, ...props }: SampleCardProps): JSX
 			</Card>
 		</div>
 	);
-};
+}));
