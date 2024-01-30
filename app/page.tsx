@@ -19,11 +19,13 @@ export default async function Home() {
 						transition={{ delay: i * 0.1 }}
 						initial='hidden'
 						animate='visible'
+						tabIndex={0}
+						aria-label={`Карточка поста ${title}`}
 					>
 						<Htag tag='h4'>
 							{title}
 						</Htag>
-						<P>
+						<P tabIndex={0}>
 							{body}
 						</P>
 					</SampleCard>
