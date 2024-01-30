@@ -17,21 +17,21 @@ export const SampleCard = motion(forwardRef<HTMLDivElement, SampleCardProps>(({ 
 			<Card>
 				<CardMedia src="cardMedia-Safari (Catalina) - Dark 1.png" context='list' />
 				<CardItems lay='col' className='gap-8'>
-					<CardItems lay='row' className='gap-6'>
-						<CardItems lay='inline' className='gap-6'>
-							<Tag>Frontend</Tag>
+					<CardItems lay='row' className='gap-6' aria-label='Теги' tabIndex={0}>
+						<CardItems id='cardTags' lay='inline' className='gap-6'>
+							<Tag tabIndex={0}>Frontend</Tag>
 							<span>·</span>
-							<Tag>1 месяц назад</Tag>
+							<Tag tabIndex={0}>1 месяц назад</Tag>
 						</CardItems>
-						<Likes quantity={4} />
+						<Likes quantity={4} tabIndex={0} />
 					</CardItems>
 					<CardItems lay='col'>
 						{children}
 					</CardItems>
 				</CardItems>
-				<CardItems lay='row' className='gap-6'>
-					<Tag>{`3 ${pluralize(3, ['минута', 'минуты', 'минут'])}`}</Tag>
-					<Link href={`/post/${postId}`}>
+				<CardItems id='readSection' lay='row' className='gap-6' aria-label='Для чтения потребуется'>
+					<Tag id='tag1' tabIndex={0} aria-labelledby='readSection tag1'>{`3 ${pluralize(3, ['минута', 'минуты', 'минут'])}`}</Tag>
+					<Link href={`/post/${postId}`} tabIndex={-1}>
 						<Button appearance='primary'>
 							Читать
 							<img src="Button-icon-arrow.png" />
