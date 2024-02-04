@@ -21,7 +21,7 @@ export default function RootLayout({
 			<body className={open_sans.className}>
 				<div className="wrapper">
 					<Header>
-						<Htag tag='h1'>Блог на гридах</Htag>
+						<Htag tag='h1' tabIndex={0}>Блог на гридах</Htag>
 					</Header>
 					{children}
 				</div>

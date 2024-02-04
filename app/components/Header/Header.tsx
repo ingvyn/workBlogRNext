@@ -20,8 +20,8 @@ export const Header = async ({ className, children, ...props }: HeaderProps): Pr
 			{children}
 			{
 				devAccount && (
-					<a href={devAccount.href}>
-						<img src={devAccount.image} />
+					<a href={devAccount.href} aria-label='Ссылка на github разработчика'>
+						<img src={devAccount.image} aria-hidden='true' />
 					</a>
 				)
 			}
