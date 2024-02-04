@@ -12,7 +12,7 @@ export const CardMedia = ({ src, context, className, ...props }: CardMediaProps)
 			{...props}
 		>
 			{
-				<img src={src} />
+				<img src={src} alt='Тестовое изображение' />
 			}
 		</div>
 	);
