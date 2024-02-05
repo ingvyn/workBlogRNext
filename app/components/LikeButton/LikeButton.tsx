@@ -19,6 +19,7 @@ export const LikeButton = ({ className, post, onLike, ...rest }: LikeButtonProps
 			})}
 			onClick={() => setLiked(!liked)}
 			{...rest}
+			aria-label={`Нажмите, чтобы ${liked ? 'снять лайк' : 'поставить лайк'}`}
 		>
 			<LikeIcon></LikeIcon>
 		</button>

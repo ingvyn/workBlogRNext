@@ -18,7 +18,10 @@ export const CommentsForm = ({ post, className, ...props }: CommentsFormProps): 
 
 	return (
 		<>
-			<form onSubmit={handleSubmit(onSubmit)}>
+			<form onSubmit={handleSubmit(onSubmit)}
+				tabIndex={0}
+				aria-label='Форма для отправки комментария'
+			>
 				<div
 					className={cn(styles.commentsForm, className)}
 					{...props}
@@ -27,11 +30,15 @@ export const CommentsForm = ({ post, className, ...props }: CommentsFormProps): 
 						{...register('name', { required: { value: true, message: 'Заполните имя' } })}
 						placeholder='Имя'
 						error={errors.name}
+						aria-label='Введите Ваше имя, под которым будет отправлен комментарий'
+						aria-invalid={errors.name ? true : false}
 					/>
 					<Textarea
 						{...register('comment', { required: { value: true, message: 'Добавьте комментарий' } })}
 						placeholder='Комментарий'
 						error={errors.comment}
+						aria-label='Введите текст комментария'
+						aria-invalid={errors.comment ? true : false}
 					/>
 					<Button appearance='secondary' type='submit' className={styles.submit}>Отправить</Button>
 				</div>
