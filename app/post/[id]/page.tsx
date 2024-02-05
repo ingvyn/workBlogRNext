@@ -34,22 +34,28 @@ export default async function Post({ params }: { params: { id: string } }) {
 	const id = Number(params.id);
 	return (
 		<div className={styles.wrapper}>
-			<Htag tag='h2'>
+			<Htag tag='h2' tabIndex={0}>
 				{title}
 			</Htag>
 			<div className={styles.inline}>
-				<Tag>{topic}</Tag>
+				<Tag tabIndex={0}>{topic}</Tag>
 				<span>·</span>
-				<Tag>{periodTag}</Tag>
+				<Tag tabIndex={0}>{periodTag}</Tag>
 				<span>·</span>
-				<Tag>{durationTag}</Tag>
+				<Tag tabIndex={0}>{durationTag}</Tag>
 				<span>·</span>
-				<Likes quantity={4} />
+				<Likes quantity={4} tabIndex={0} />
 			</div>
-			<img className={styles.postImage} src="Safari (Catalina) - Dark 1.png" />
-			{body && <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: body }}></div>}
+			<img
+				className={styles.postImage}
+				src="Safari (Catalina) - Dark 1.png"
+				alt='Тестовое изображение поста'
+				tabIndex={0}
+			/>
+			{body && <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: body }}
+				tabIndex={0}></div>}
 			<div className={styles.likesPress}>
-				<span>Понравилось? Жми</span>
+				<span tabIndex={0}>Понравилось? Жми</span>
 				<LikeButton post={id} onLike={onLike} />
 			</div>
 			<PostComments post={id} />

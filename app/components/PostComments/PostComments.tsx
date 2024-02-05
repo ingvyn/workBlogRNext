@@ -15,17 +15,31 @@ export const PostComments = async ({ post, className, ...props }: PostCommentsPr
 		<div className={cn(styles.comments,
 			className)}
 			{...props}>
-			<Htag tag='h2'>
+			<Htag tag='h2' tabIndex={0}>
 				Комментарии
 			</Htag>
 			{comments && comments.map(({ id, name, email, body }) => {
 				return <div key={id}>
-					<div className={styles.inline}>
-						<span className={styles.name}>{name}</span>
+					<div id={`authorSection${id}`}
+						className={styles.inline}
+						aria-label='Данные об авторе комментария'
+					>
+						<span id={`authorName${id}`}
+							className={styles.name}
+							tabIndex={0}
+							aria-labelledby={`authorSection${id} authorName${id}`}
+						>
+							{name}
+						</span>
 						<span>·</span>
-						<span className={styles.email}>{email}</span>
+						<span
+							className={styles.email}
+							tabIndex={0}
+						>
+							{email}
+						</span>
 					</div>
-					<div className={styles.comment}>
+					<div className={styles.comment} tabIndex={0}>
 						{body}
 					</div>
 				</div>;
