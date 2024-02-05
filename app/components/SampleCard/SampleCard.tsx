@@ -17,7 +17,7 @@ export const SampleCard = motion(forwardRef<HTMLDivElement, SampleCardProps>(({ 
 	const [keyNavigationEnabled, setKeyNavigationEnabled] = useState<boolean>(false);
 	const enableCardNavigation = (key: KeyboardEvent) => {
 		if (key.code == 'Space' || key.code == 'Enter') {
-			key.preventDefault();
+			if (key.code == 'Space') key.preventDefault();
 			setKeyNavigationEnabled(true);
 		}
 		if (key.code == 'Tab' && (key.target as Element).id === `lastTabSampleCard${postId}` && key.shiftKey == false) {
