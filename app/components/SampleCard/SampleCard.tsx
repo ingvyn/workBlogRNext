@@ -20,7 +20,9 @@ export const SampleCard = motion(forwardRef<HTMLDivElement, SampleCardProps>(({ 
 			if (key.code == 'Space') key.preventDefault();
 			setKeyNavigationEnabled(true);
 		}
-		if (key.code == 'Tab' && (key.target as Element).id === `lastTabSampleCard${postId}` && key.shiftKey == false) {
+		if (key.code == 'Tab' && (key.target as Element).id === `lastTabSampleCard${postId}` && key.shiftKey == false ||
+			key.code == 'Tab' && key.target === key.currentTarget && key.shiftKey == true
+		) {
 			setKeyNavigationEnabled(false);
 		}
 	};
